@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gestionale Ordini</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Gestionale Ordini</h1>
+      <p class="subtitle">Registrazione ordini, stati di avanzamento e riepilogo.</p>
+    </header>
+
+    <main>
+      <section class="stats" id="stats"></section>
+
+      <section class="card">
+        <h2>Nuovo ordine</h2>
+        <form id="order-form">
+          <div class="grid">
+            <label>
+              Cliente *
+              <input name="customer" required placeholder="Mario Rossi" />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" placeholder="mario@esempio.it" />
+            </label>
+          </div>
+
+          <h3>Righe ordine</h3>
+          <div id="items"></div>
+          <button type="button" class="ghost" id="add-item">+ Aggiungi riga</button>
+
+          <label>
+            Note
+            <textarea name="note" rows="2" placeholder="Consegna entro venerdi'"></textarea>
+          </label>
+
+          <div class="form-footer">
+            <span id="form-total">Totale: € 0.00</span>
+            <button type="submit">Salva ordine</button>
+          </div>
+          <p class="error" id="form-error"></p>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="list-header">
+          <h2>Ordini</h2>
+          <div class="filters">
+            <input id="search" placeholder="Cerca cliente, prodotto o ID" />
+            <select id="status-filter">
+              <option value="">Tutti gli stati</option>
+            </select>
+          </div>
+        </div>
+        <div id="orders"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

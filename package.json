@@ -1,0 +1,24 @@
+{
+  "name": "gestionale-ordini",
+  "version": "1.0.0",
+  "description": "Gestionale ordini minimale: anagrafica clienti, righe ordine, stati e riepilogo.",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "gestionale",
+    "ordini",
+    "express",
+    "rest-api"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
